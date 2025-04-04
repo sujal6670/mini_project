@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 function connectDB(){
 
-    mongoose.connect(`mongodb+srv://sujalthakkarit22:LaWVr0OxHAhKsJtT@cluster0.rrtjfpc.mongodb.net/`, {useUnifiedTopology: true , useNewUrlParser: true})
+    mongoose.connect('mongodb+srv://sujalthakkarit22:LaWVr0OxHAhKsJtT@cluster0.rrtjfpc.mongodb.net/sample_mflix?retryWrites=true&w=majority&appName=Cluster0')
 
     const connection = mongoose.connection
 
@@ -19,4 +19,4 @@ function connectDB(){
 
 connectDB()
 
-module.exports = mongoose
+module.exports = connectDB
